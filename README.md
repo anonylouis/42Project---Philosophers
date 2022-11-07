@@ -31,4 +31,15 @@ The program takes 4 or 5 arguments :
 
 ## My algorithm
 
+My algorithm is different depending on the number of philosophers :
+- If the number of philosophers is even, the solution is quite easy.  
+The even-ranked philosophers will start eating. When theyre done, they will drop their forks and the odd-ranked philosophers will start eating as well. The even-ranked philosophers will sleep and then wait for the odd-ranked philosphers etc.. They are all just waiting the forks being avalaibale alternnately.
+- If the number of philosophers is odd, the solution is much more complicated. The solution is close to the previous one, but a philosopher will have to be forced to think to let his neighbor take his fork before him. My solution translates to math formulas, but to make it quick, I'm going to start the simulaton in a good "rotation" and then force them to think one after one at each (n-1)/2 meal.
+
 ## Example
+
+Some commands to test the program :
+- `./philo 4 410 200 200` : No philospher must die (even number case).
+- `./philo 3 610 200 200` : No philospher must die (odd number case).
+- `./philo 4 310 200 200` : A philosopher must die (even number case).
+- `./philo 3 510 200 200` : No philospher must die (odd number case).
